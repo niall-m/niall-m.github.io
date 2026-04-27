@@ -1,0 +1,197 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+  --page-top: #081018;
+  --page-middle: #0d1721;
+  --page-bottom: #0f1d27;
+  --panel: rgba(15, 24, 34, 0.74);
+  --panel-strong: rgba(10, 18, 27, 0.88);
+  --accent: #72ddd1;
+  --accent-strong: #4abeb2;
+  font-family:
+    "Segoe UI", "SF Pro Display", "SF Pro Text", ui-sans-serif, system-ui,
+    -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--page-top);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    radial-gradient(circle at top, rgba(82, 208, 196, 0.16), transparent 30%),
+    linear-gradient(180deg, var(--page-top) 0%, var(--page-middle) 48%, var(--page-bottom) 100%);
+  color: #f8fafc;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.code-block {
+  font-feature-settings: "liga" 0, "calt" 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+button:not(:disabled) {
+  cursor: pointer;
+}
+
+:where(a, button, [tabindex]):focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+::selection {
+  background: rgba(94, 234, 212, 0.28);
+  color: #f8fafc;
+}
+
+.portfolio-section {
+  padding-inline: 1.5rem;
+  padding-block: 4rem;
+}
+
+.surface-panel {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), var(--panel));
+  box-shadow:
+    0 24px 80px rgba(0, 0, 0, 0.24),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(18px);
+}
+
+.surface-soft {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(7, 13, 20, 0.28);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.03),
+    0 12px 40px rgba(0, 0, 0, 0.16);
+}
+
+.eyebrow {
+  display: inline-flex;
+  min-height: 2.5rem;
+  align-items: center;
+  border-radius: 999px;
+  border: 1px solid rgba(114, 221, 209, 0.22);
+  background: rgba(114, 221, 209, 0.1);
+  padding-inline: 1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: #c4f7f1;
+}
+
+.button-primary,
+.button-secondary {
+  display: inline-flex;
+  min-height: 2.75rem;
+  min-width: 2.75rem;
+  align-items: center;
+  border-radius: 999px;
+  padding-inline: 1.125rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    color 180ms ease,
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.button-primary {
+  border: 1px solid transparent;
+  background: var(--accent);
+  color: #082029;
+  box-shadow: 0 12px 30px rgba(82, 208, 196, 0.22);
+}
+
+.button-primary:hover {
+  background: #86e7dc;
+}
+
+.button-secondary {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+  color: #e2e8f0;
+}
+
+.button-secondary:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.button-primary:active,
+.button-secondary:active {
+  transform: scale(0.96);
+}
+
+.button-primary:focus-visible,
+.button-secondary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+.status-pill {
+  display: inline-flex;
+  min-height: 2.5rem;
+  align-items: center;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  padding-inline: 1rem;
+  font-size: 0.875rem;
+  color: rgb(148 163 184);
+}
+
+.lift-card {
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    background-color 180ms ease;
+}
+
+.lift-card:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 30px 90px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+@media (min-width: 640px) {
+  .portfolio-section {
+    padding-inline: 2.5rem;
+    padding-block: 5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .portfolio-section {
+    padding-inline: 4rem;
+    padding-block: 6rem;
+  }
+}
