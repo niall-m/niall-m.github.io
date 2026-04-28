@@ -3,8 +3,7 @@ import { Link } from "react-router-dom"
 
 const navLinks = [
   { label: "Work", sectionId: "work" },
-  { label: "Experience", sectionId: "experience" },
-  { label: "Contact", sectionId: "contact" }
+  { label: "Experience", sectionId: "experience" }
 ]
 
 export function Navigation() {

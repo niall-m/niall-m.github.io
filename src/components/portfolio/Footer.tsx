@@ -1,3 +1,5 @@
+import { EmailButton } from "./EmailButton"
+
 export function Footer() {
   return (
     <footer className="border-t border-white/10">
@@ -20,12 +22,14 @@ export function Footer() {
           >
             LinkedIn
           </a>
-          <a
-            href="mailto:niall.mahford@gmail.com"
+          <EmailButton
+            containerClassName="inline-flex items-center gap-2"
             className="transition-colors hover:text-slate-100 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--accent)]"
+            copiedLabel="Copied"
+            statusClassName="min-w-[3.75rem] text-xs text-[var(--accent)] transition-opacity"
           >
             Email
-          </a>
+          </EmailButton>
         </div>
       </div>
     </footer>
